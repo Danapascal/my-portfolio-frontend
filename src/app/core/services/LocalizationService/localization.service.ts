@@ -6,8 +6,10 @@ import { firstValueFrom, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class LocalizationService {
-  private translationsKey = 'translations';
-  private apiUrl = 'http://localhost/MyPortfolio';
+  private readonly translationsKey = 'translations';
+  //TODO: crear archivo api-urls con constantes de urls
+  // Mover URL base a archivo de configuración
+  private apiUrl = 'http://localhost/MyPortfolio/api';
 
   constructor(private http: HttpClient) {}
 

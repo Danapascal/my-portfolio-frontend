@@ -1,6 +1,5 @@
 import { APP_INITIALIZER, Provider } from '@angular/core';
 import { AuthService } from './core/services/AuthService/auth.service';
-import { LocalizationService } from './core/services/LocalizationService/localization.service';
 import { TranslateService } from './core/services/TranslateService/translate.service';
 
 export function initApp(
@@ -28,7 +27,7 @@ export function initApp(
         try {
           translateService.setTranslations(JSON.parse(data));
         } catch {
-          console.error('Error parsing translations');
+          console.error('Error al parsear las traducciones');
         }
       }
     } else {

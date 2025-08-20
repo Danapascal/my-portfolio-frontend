@@ -7,7 +7,9 @@ import { firstValueFrom, tap } from 'rxjs';
 })
 export class AuthService {
 
-  private tokenKey = 'auth_token';
+  private readonly tokenKey = 'auth_token';
+  //TODO: crear archivo api-urls con constantes de urls
+  // Mover URL base a archivo de configuración
   private apiUrl = 'http://localhost/MyPortfolio/api';
 
   constructor(private http: HttpClient) { }
