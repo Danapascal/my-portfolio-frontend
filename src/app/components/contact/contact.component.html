@@ -1,0 +1,14 @@
+<section id="contact" class="max-w-4xl mx-auto p-6 mt-12">
+  <h2 class="text-3xl font-semibold mb-6">Contacto</h2>
+  <form (submit)="onSubmit()" class="flex flex-col space-y-4 max-w-md mx-auto">
+    <input type="text" placeholder="Tu nombre" required
+           class="border p-3 rounded focus:outline-indigo-500" [(ngModel)]="name" name="name" />
+    <input type="email" placeholder="Tu email" required
+           class="border p-3 rounded focus:outline-indigo-500" [(ngModel)]="email" name="email" />
+    <textarea placeholder="Mensaje" required rows="5"
+              class="border p-3 rounded focus:outline-indigo-500" [(ngModel)]="message" name="message"></textarea>
+    <button type="submit" class="bg-gray-700 text-white py-3 rounded hover:bg-indigo-800 transition">
+      Enviar mensaje
+    </button>
+  </form>
+</section>
